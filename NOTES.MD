@@ -43,3 +43,37 @@ Steps for React Router:
 - a function on a React Component class that is automatically called by React
 - componentDidMount() - will be automatically called by React immediately **AFTER** the component it is attached to renders in the DOM
 - componentWillMount - will be automatically called by React immediately **BEFORE** the component it is attached to renders in the DOM
+
+## Switch
+
+- Switch is part of React Router
+- it helps to make proper explicit connections to routes
+- I put the most specific routes at the top of a switch component
+
+## Navigation 
+
+- NO more anchor tags
+- I do not ask the browser to do a request and fetch a different HTML doc
+- React Router just shows a new set of Components
+- I import { Link } from 'react-router-dom'
+- Link behaves the same as an HTML anchor tag **EXCEPT** it has a couple built in event handlers that prevent the browser from default behavior that sends another HTTP request for another HTML doc
+
+## Redux form
+
+- form builder for building and validating form elements
+- npm install redux-form
+- follow docs on setup - import reducer and hook it up to combineReducers method
+- WHAT DOES IT DO? -> Redux for saves me from having to manually set up a bunch of Action Creators for forms I build
+- **Important** set it up in the combineReducers as a form: key -> form: formReducer
+- reduxForm helper method is built-in and acts similar to the connect helper method -> it allows a Component to talk directly to the Redux store
+- reduxForm is passed a single argument(a function) that takes a few configurations 
+    1) form: (the name of the form) **MUST BE UNIQUE**
+
+  HOW TO USE REDUX FORM:
+
+  1) Identify different pieces of form state
+  2) Make 1 'Field' Component per piece of state
+  3) User changes a 'Field' input
+  4) Redux form automatically handles changes
+  5) User submits form
+  6) Redux forms hands control of the form back to me -> I validate inputs and handle form submittal VIA callbacks
