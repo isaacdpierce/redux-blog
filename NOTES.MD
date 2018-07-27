@@ -33,3 +33,13 @@ Steps for React Router:
   2) component={}
 
 - ** The current our that is shown is another piece of state. The url creates a new view of different components
+
+## Reducer
+
+- will produce the posts piece of state
+
+## Lifecycle method
+
+- a function on a React Component class that is automatically called by React
+- componentDidMount() - will be automatically called by React immediately **AFTER** the component it is attached to renders in the DOM
+- componentWillMount - will be automatically called by React immediately **BEFORE** the component it is attached to renders in the DOM
