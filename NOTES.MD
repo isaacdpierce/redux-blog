@@ -77,3 +77,13 @@ Steps for React Router:
   4) Redux form automatically handles changes
   5) User submits form
   6) Redux forms hands control of the form back to me -> I validate inputs and handle form submittal VIA callbacks
+
+## Field Component (from redux-form)
+
+- used to specify an input field in a redux-form -> same as an HTML input field
+- can have a component prop which takes a function as an argument
+- it wires up event handlers and Action creators for us
+- it holds the data and communicates with Redux Form
+- IT DOES NOT - know how to show itself on the screen(JSX)
+- the 'component' prop tells the Field Component how to show itself on the screen with JSX
+- it is up to me to define the 'component' prop
