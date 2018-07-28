@@ -98,3 +98,8 @@ Steps for React Router:
   1) pristine - default - page first loaded - user has never entered the field
   2) touched - a user has focused or input data then focused out
   3) invalid - incorrect info entered - error
+
+## Programmatic navigation
+
+- automatically move user around the app
+- ie. after a blog post submit return to blog list page

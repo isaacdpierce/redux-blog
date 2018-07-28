@@ -25,7 +25,9 @@ class PostsNew extends Component {
   }
 
   onSubmit(values) {
-    this.props.createPost(values);
+    this.props.createPost(values, () => {
+      this.props.history.push('/'); // built in react method (history) - helps navigation to one of the defined routes in app
+    });
   }
 
   render() {
