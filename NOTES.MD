@@ -103,3 +103,15 @@ Steps for React Router:
 
 - automatically move user around the app
 - ie. after a blog post submit return to blog list page
+
+## this.props.match.params.id
+
+- this is provided by React Router 
+- match is the top level property
+- params property inside it is an object that holds all the different *wildcard tokens that exist inside a url
+
+## mapStateToProps
+
+- first argument is always the application state 
+- second argument is ownProps
+- ownProps is the props object that is going to the current scoped Component
