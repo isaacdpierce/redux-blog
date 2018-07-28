@@ -61,6 +61,8 @@ Steps for React Router:
 ## Redux form
 
 - form builder for building and validating form elements
+- it is only responsible for handling the state and validation of a form
+- it is not reponsible for taking the data or saving the data input to a field
 - npm install redux-form
 - follow docs on setup - import reducer and hook it up to combineReducers method
 - WHAT DOES IT DO? -> Redux for saves me from having to manually set up a bunch of Action Creators for forms I build
@@ -68,6 +70,9 @@ Steps for React Router:
 - reduxForm helper method is built-in and acts similar to the connect helper method -> it allows a Component to talk directly to the Redux store
 - reduxForm is passed a single argument(a function) that takes a few configurations 
     1) form: (the name of the form) **MUST BE UNIQUE**
+
+- redux form includes a lot of extra properties that are passed to my Components once wired in
+- handleSubmit is one of the included properties that I can use with form submissions
 
   HOW TO USE REDUX FORM:
 
@@ -87,3 +92,9 @@ Steps for React Router:
 - IT DOES NOT - know how to show itself on the screen(JSX)
 - the 'component' prop tells the Field Component how to show itself on the screen with JSX
 - it is up to me to define the 'component' prop
+
+## 3 different states to be aware of for every form
+
+  1) pristine - default - page first loaded - user has never entered the field
+  2) touched - a user has focused or input data then focused out
+  3) invalid - incorrect info entered - error

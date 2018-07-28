@@ -9,8 +9,3 @@ const rootReducer = combineReducers({
 
 export default rootReducer;
 
-
-// const rootReducer = combineReducers({
-//   posts: PostsReducer,
-//   form: formReducer 
-// });
