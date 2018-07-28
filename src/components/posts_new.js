@@ -9,7 +9,7 @@ class PostsNew extends Component {
         <input
           className="form-control"
           type="text"
-          {...field.input} // adds all event handlers to the field (onChange,                   // onBlur, etc)
+          {...field.input}
         />
       </div>
     );  
@@ -20,13 +20,18 @@ class PostsNew extends Component {
       <div>
         <form>
           <Field 
-            label="Title"
+            label="Title for Post"
             name="title"
             component={this.renderField}
           />
           <Field 
-            label="Tags"
-            name="tags"
+            label="Categories"
+            name="categories"
+            component={this.renderField}
+          />
+          <Field 
+            label="Post Content"
+            name="content"
             component={this.renderField}
           />
         </form>
@@ -35,6 +40,15 @@ class PostsNew extends Component {
   }
 }
 
+function validate(values) {
+  const errors = {};
+
+  // validate the inputs from values
+
+  return errors;
+}
+
 export default reduxForm({
+  validate: validate,
   form: 'PostsNewForm'
 })(PostsNew);
